@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Instagram (Simulação Educacional)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fafafa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: white;
+      padding: 30px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      width: 300px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      font-size: 14px;
+    }
+
+    button {
+      width: 95%;
+      padding: 10px;
+      background-color: #3897f0;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .aviso {
+      color: red;
+      font-size: 12px;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Instagram</h2>
+    <form id="loginForm">
+      <input type="text" id="usuario" placeholder="Telefone, nome de usuário ou email" required><br>
+      <input type="password" id="senha" placeholder="Senha" required><br>
+      <button type="submit">Entrar</button>
+    </form>
+    <div class="aviso">
+      ⚠️ Simulação: Esta página é apenas para fins educativos. Nenhum dado será enviado.
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('loginForm');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // Impede o envio real do formulário
+
+      const usuario = document.getElementById('usuario').value;
+      const senha = document.getElementById('senha').value;
+
+      // Exibir no console
+      console.log("=== DADOS DIGITADOS ===");
+      console.log("Usuário:", usuario);
+      console.log("Senha:", senha);
+      console.log("⚠️ Estes dados não foram enviados, apenas exibidos localmente.");
+
+      // Pop-up de conscientização
+      alert(
+        "⚠️ Atenção!\n\n" +
+        "Você acabou de inserir suas credenciais em uma página falsa.\n\n" +
+        "Este é apenas um experimento educacional para demonstrar como ataques de phishing funcionam. " +
+        "Nunca insira suas informações pessoais em sites desconhecidos ou não confiáveis.\n\n" +
+        "Fique atento e proteja seus dados!"
+      );
+    });
+  </script>
+</body>
+</html>
+</body>
+</html>
